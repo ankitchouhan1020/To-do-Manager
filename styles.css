@@ -1,0 +1,12 @@
+body {
+	background: url(images/abc.jpg) no-repeat;
+	background-size: cover;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+h2{
+	font-family: cursive;
+}
+input{
+	color: #999;
+}

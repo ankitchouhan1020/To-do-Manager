@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJs Playlist</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+</head>
+<body>
+	<div id="vue-App" class="container">
+		<h2 class="center">To-do Manager</h2>
+			<input type="text" placeholder="Enter New Task.." value="" v-model="newTask" class="input-field" required>
+			<button class="btn waves-effect waves-light"
+			 v-if="newTask!=''" @click="todoList.push(newTask),newTask=''">ADD</button>
+			 
+		<table class="highlight">
+			<tr>
+				<th>Task No.</th>
+				<th colspan="2">Task Discription</th>
+			</tr>
+			<template class="list" v-for="(task,index) in todoList">
+			<tr>
+				<td>{{index+1}}</td>
+				<td>{{task}}</td>
+				<td><button class="waves-effect waves-light btn" v-on:click="todoList.splice(index,1)"><i class="material-icons">clear</i>
+				</button>
+				</td>
+			</tr>
+			</template>
+		</table>
+					
+		</div>
+	<script type="text/javascript" src="app.js"></script>
+	  <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+</html>
