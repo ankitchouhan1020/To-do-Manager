@@ -1,8 +1,8 @@
-# Todo-Manager
+# To-do Manager
 A Task Manager helps in managing our work flow.Here is my little contribution.
 
 
-![Todo - Manager](images/todoImg.png?raw=true)
+![To-do - Manager](images/todoImg.png?raw=true)
 
 
 ## Built With
